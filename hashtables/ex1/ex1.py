@@ -1,9 +1,7 @@
 #  Hint:  You may not need all of these.  Remove the unused functions.
 from hashtables import (HashTable,
                         hash_table_insert,
-                        hash_table_remove,
-                        hash_table_retrieve,
-                        hash_table_resize)
+                        hash_table_retrieve,)
 
 
 def get_indices_of_item_weights(weights, length, limit):
@@ -24,7 +22,7 @@ def get_indices_of_item_weights(weights, length, limit):
         # Find the indices of weights that hit the limit
         target = hash_table_retrieve(ht, diff)
 
-        # If target is not empty, then index of weight is found
+        # If target is not empty, then index of other element needed to sum up to limit is found
         if target is not None:
             # sum of Index weight and target weight should hit the limit
             return (index, target)
